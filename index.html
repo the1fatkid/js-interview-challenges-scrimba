@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Interview Challenges</title>
+
+    <style>
+        body{
+            height: 100vh;
+            font-family: monospace;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            background-color: #f8f4ec;
+        }
+        h1{
+            font-size: 6rem;
+            margin:0;
+            position:relative;
+        }
+        h1::after{
+            content: " ";
+            display: inline-block;
+            height: 4px;
+            width: 4px;
+            background-color: #f26a8d;
+            position: absolute;
+            bottom: 5px;
+            left: 0px;
+            animation: underline 1500ms forwards ease-in; 
+        } 
+        h2{
+            font-size: 3rem;
+            text-align: center;
+            margin:0;
+        }
+
+        @keyframes underline{
+            from{
+                width: 4px;
+            }
+            to{
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Scrimba</h1>
+    <h2>JavaScript Interview Challenges</h2>
+    <script src="challenge_11.js"></script>
+</body>
+</html>
