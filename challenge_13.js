@@ -24,8 +24,45 @@ const kittyPrizes = [
     ["🐟","💐", "💐"], "💵", "💵", ["🐟"], "🐟"
 ];
 
+// My Attempt: 
+function flatten1(arr){
+    const newArray=[];
+    for(let i=0; i<arr.length; i++){
+        if(typeof arr[i] == 'object'){
+            for(let j=0; j< arr[i].length; j++){
+                newArray.push(arr[i][j]);
+            }  
+        }
+        else{ 
+            newArray.push(arr[i]);
+        }
+    }
+    return newArray;
+}
+
+// Solution: Part 1
+function flatten2(arr){
+    return arr.flat();
+}
+
+// Solution: Part 2
 function flatten(arr){
- 
+    // initialize a new, empty array
+    // loop through the passed in array and check - string or array? 
+        // if the item is string, push into the new array
+        // if the item is an array, loop through it, pushing each item into the array
+    // return new array
+    
+    const newArr = [];
+    
+    arr.forEach(element => {
+        if(Array.isArray(element)){
+            element.forEach(item => newArr.push(item))
+        } else {
+            newArr.push(element);
+        }
+    });
+    console.log(newArr)
 }
 
 console.log(flatten(kittyPrizes));
