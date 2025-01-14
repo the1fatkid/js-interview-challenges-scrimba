@@ -16,8 +16,8 @@ const studentCount = [50,53,61,67,60,70,78,80,80,81,90,110];
 // My Attempt:
 function sumArray(arr){
     let sum=0;
-    for(item of studentCount){
-        sum+= item;
+    for(let item of arr){
+        sum += item;
     }
     return sum;
 }
@@ -45,4 +45,10 @@ function sumArray3(arr){
 }
 
 // Solution: Part 3 (Try to solve it using reduce() method)
-console.log(sumArray(studentCount));
+function sumArray4(arr){
+    return arr.reduce((acc, curr)=>{
+        return acc+ curr;
+    }, 0);
+}
+
+console.log(sumArray4(studentCount));

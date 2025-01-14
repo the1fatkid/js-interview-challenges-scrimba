@@ -24,11 +24,12 @@ function countChars(str) {
             continue;
         }
 
-        if (chars[i]) {// if it's a truthy value
-            chars[i]++;
+        if (chars[str[i]]) {// if it's a truthy value
+            chars[str[i]]++;
         }
         else {
-            chars[i] = 1;
+            console.log(chars[str[i]]);
+            chars[str[i]] = 1;
         }
     }
     return chars;

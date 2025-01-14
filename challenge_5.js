@@ -21,7 +21,8 @@ Your function's output should look something like this:
 
 function awardBonuses(){
     for(let i=1; i<= 100; i++){
-       if( i%3 === 0 && i%5 === 0){
+      //  if( i%3 === 0 && i%5 === 0){
+       if( i%15 === 0){
         console.log(`${i} - JACKPOT! 1 Million and a Yacht!`);
        }
        else if(i%3 === 0){
